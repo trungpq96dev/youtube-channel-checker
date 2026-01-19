@@ -1,7 +1,9 @@
 from googleapiclient.discovery import build
 from urllib.parse import urlparse
+import os
 
-API_KEY = "AIzaSyCGw26TZirurhgA0KtsO7as7a6kdcEgrAE"
+# API_KEY = "AIzaSyCGw26TZirurhgA0KtsO7as7a6kdcEgrAE"
+API_KEY = os.getenv("YOUTUBE_API_KEY")
 
 youtube = build("youtube", "v3", developerKey=API_KEY)
 
